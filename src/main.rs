@@ -1,3 +1,8 @@
+mod logger;
+
+use log::{info};
+
 fn main() {
-    println!("Hello, world!");
+    logger::init_logger().expect("Error while creating logger");
+    info!("Starting rostorrent");
 }
